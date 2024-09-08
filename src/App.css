@@ -1,32 +1,85 @@
-.container{
-  background-color: #101820FF;
+/* Default styles for larger screens */
+.container {
+  background-color: #101820ff;
   height: 500px;
-  position: relative;
   width: 500px;
+  position: relative;
   left: 400px;
   top: 50px;
   padding-top: 50px;
   padding-left: 180px;
   border-radius: 20px;
-  
 }
 
-input{
-  font-size: x-large;
-  border-radius: 5px;
-  
-}
-button{
-  margin-left: 40px;
-  font-size: larger;
-  background-color: #F2AA4CFF;
+input {
+  font-size: 1.5rem; /* Use rem instead of fixed sizes */
   border-radius: 5px;
 }
-.weatherinfo{
+
+button {
+  margin-left: 2rem; /* Relative unit */
+  font-size: 1.2rem;
+  background-color: #f2aa4cff;
+  border-radius: 5px;
+}
+
+.weatherinfo {
   margin-top: 30px;
-  color: #F2AA4CFF;
-  font-size: xx-large;
+  color: #f2aa4cff;
+  font-size: 2rem;
 }
-h3{
+
+h3 {
   font-weight: bold;
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    width: 80%; /* Relative width */
+    height: auto;
+    left: 10%;
+    padding-left: 10%; /* Adjust padding */
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .weatherinfo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Use full width on mobile */
+    height: auto;
+    left: 5%;
+    padding-left: 5%;
+    padding-top: 20px;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .weatherinfo {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }
